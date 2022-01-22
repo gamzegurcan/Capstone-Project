@@ -4,3 +4,4 @@ const BASE_AXIOS = axios.create({baseURL: "https://api.themoviedb.org/3"})
 
 export const fetchMovies = () => BASE_AXIOS.get(`/discover/movie?api_key=${API_KEY}&page=1`)
 
+

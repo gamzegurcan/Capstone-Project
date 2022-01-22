@@ -1,7 +1,7 @@
 function FilmDetail(props){
   return(
     <>
-      <h1>Fİlm Detail</h1>
+      <h1>Film Detail</h1>
     </>
   );
 }
