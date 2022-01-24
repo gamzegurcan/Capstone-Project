@@ -12,7 +12,7 @@ function Search({ search, setSearch }) {
                 debounceTimeout={300}
                 value={search}
                 onChange={event => {setSearch(event.target.value)
-                  console.log(event.target.value)
+                //   console.log(event.target.value)
                 }}
                 placeholder="Search films by name"
             />
