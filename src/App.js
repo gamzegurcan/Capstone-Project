@@ -8,15 +8,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container">
-        <div className="row">
           <Routes>
             {
               routes.map((item,index) => <Route key={index} path={item.path} element={<item.element />} />)
             }
           </Routes>
-        </div>
-      </div>
       <Footer />
     </>
   );
