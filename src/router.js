@@ -10,7 +10,7 @@ const routes = [
   { title: "Profile", element: Profile, path: "/profile", isNav: true },
   { title: "Popular", element: Popular, path: "/popular", isNav: true },
   { title: "Top Rated", element: TopRated, path: "/top-rated", isNav: true },
-  { title: "Film Detail", element:FilmDetail, path: "/movies/movieId", isNav: false },
+  { title: "Film Detail", element:FilmDetail, path: "/:movieId", isNav: false },
 ];
 
 export default routes;

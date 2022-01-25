@@ -4,6 +4,7 @@ import { fetchDiscoverMovies, fetchSearchMovies } from '../data';
 import Search from '../components/Search';
 import Discover from '../components/Discover';
 import Trending from '../components/Trending';
+import { Link } from 'react-router-dom';
 
 function Home(props) {
   const [search, setSearch] = useState("")
@@ -41,10 +42,13 @@ function Home(props) {
         filteredData?.map((item) => 
         <div key={item.id} className="col-sm-3 mt-5">
           <div  className="card" >
-            <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="Card image cap" />
-            <div className="card-body">
-              <p className="card-text">{item.title}</p>
-            </div>
+            <Link to={`${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
+              <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="Card image cap" />
+              <div className="card-body">
+                <h4 className="card-text">{item.title}</h4>
+                <p className="card-text">{item.release_date}</p>
+              </div>
+            </Link>
           </div>
         </div>
         )

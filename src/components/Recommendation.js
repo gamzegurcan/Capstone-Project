@@ -1,17 +1,19 @@
-import { useQuery } from 'react-query';
+import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom';
-import { fetchDiscoverMovies } from '../data';
+import { fetchRecommendationMovies } from "../data";
 
-function Discover(props){
-  const { data } = 
-    useQuery('discovermovies', fetchDiscoverMovies, 
-    { 
-      retry: false, 
-      select: (data) => data.data.results 
-    })
+function Recommendation({movieId}){
+  const { data } =
+    useQuery(['recommendation', movieId], () => fetchRecommendationMovies(movieId),
+      {
+        retry: false,
+        select: (data) => data.data.results
+
+      })
+      // console.log(data)
   return(
     <>
-      {
+    {
         data?.map((item) => 
         <div key={item.id} className="col-sm-3">
           <div  className="card" >
@@ -23,10 +25,10 @@ function Discover(props){
           </Link>
           </div>
         </div>
-        )
+        ).slice(0,3)
     } 
     </>
   );
 }
 
-export default Discover;
+export default Recommendation;
