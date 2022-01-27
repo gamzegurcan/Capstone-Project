@@ -7,9 +7,14 @@ export const addSeenList = (movieId) => ({
     payload: movieId
 })
 
-export const addFavorite = (movieId) => ({
+export const addFavorite = (movieId, title, poster_path, release_date) => ({
     type: ADD_FAVORITE,
-    payload: movieId
+    payload: {
+      movieId,
+      title,
+      poster_path,
+      release_date
+    }
 })
 
 export const removeFavorite = (movieId) => ({

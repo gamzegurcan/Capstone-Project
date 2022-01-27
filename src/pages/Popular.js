@@ -1,4 +1,5 @@
 import { useQuery } from 'react-query';
+import MovieCard from '../components/MovieCard';
 import { fetchPopularMovies } from '../data';
 
 function Popular(props){
@@ -28,12 +29,7 @@ function Popular(props){
         {
           data?.map((item) => 
           <div key={item.id} className="col-sm-3 mt-3">
-            <div  className="card" >
-              <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="..." />
-              <div className="card-body">
-                <p className="card-text">{item.title}</p>
-              </div>
-            </div>
+            <MovieCard  item={item} />
           </div>
           )
         } 

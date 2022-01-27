@@ -2,7 +2,8 @@ import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import { fetchDiscoverMovies } from '../data';
-import {AiFillHeart } from "react-icons/ai";
+import MovieCard from './MovieCard';
+
 
 function Discover(props) {
   const { data } =
@@ -28,14 +29,7 @@ function Discover(props) {
         {
           data?.map((item) =>
             <div key={item.id} className="col-sm-3">
-              <div className="card" >
-                <Link to={`${item.id}`} style={{ textDecoration: 'none', color: 'black' }}>
-                  <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="Card image cap" />
-                  <div className="card-body">
-                    <p className="card-text">{item.title}</p>
-                  </div>
-                </Link>
-              </div>
+              <MovieCard item={item} />
             </div>
           )
         }
