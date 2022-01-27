@@ -1,5 +1,7 @@
 import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import { slidesOnLeft } from 'react-slick/lib/utils/innerSliderUtils';
 import { fetchTrendingMovies } from '../data';
 
 function Trending(props){
@@ -9,8 +11,21 @@ function Trending(props){
       retry: false, 
       select: (data) => data.data.results 
     })
+
+    var settings = {
+      arrows: false,
+      autoplay: true,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+    };
+
   return(
-    <>{
+    <>
+    <Slider {...settings}>
+    {
       data?.map((item) => 
       <div key={item.id} className="col-sm-3">
         <div  className="card" >
@@ -23,7 +38,8 @@ function Trending(props){
         </div>
       </div>
       )
-  } 
+    } 
+    </Slider>
     </>
   );
 }

@@ -70,14 +70,14 @@ function Home(props) {
       
       <div className="container">
         <div className="row">
-        <h1>Discover</h1>
+        <h1 className='mb-5'>Discover</h1>
           <Discover />
         </div>
       </div>
       
       <div className="container">
         <div className="row">
-        <h1>Trending</h1>
+        <h1 className='mb-5'>Trending</h1>
           <Trending />
         </div>
       </div>
