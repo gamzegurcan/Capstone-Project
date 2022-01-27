@@ -1,11 +1,9 @@
-import {combineReducers, createStore } from "redux"
-import trendReducer from "./trending";
+import { combineReducers, createStore } from "redux";
+import userReducer from "./user";
 
-
-const rootReducer = combineReducers({
-    trend: trendReducer,
+const rootReducer= combineReducers({
+    user:userReducer,
 })
 
 const store = createStore(rootReducer)
-
-export default store
+export default store;
