@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import routes from '../../router';
 // import logo from '../../assets/images/logo';
 
-import {Nav, MenuLink, Menu} from '../../styles/NavbarStyled';
+import {Nav, MenuLink, Menu, StyledLink} from '../../styles/NavbarStyled';
 
 function Navbar(props){
   const [display, setDisplay] = useState(true)
@@ -16,6 +16,7 @@ function Navbar(props){
           <MenuLink dropdownToggle onClick={() => setDisplay(!display)}>Movies</MenuLink>
           <MenuLink href='/popular' hidden={display} toggle={() => setDisplay(!display)} >Popular</MenuLink>
           <MenuLink href='/top-rated' hidden={display} toggle={() => setDisplay(!display)}>Top Rated</MenuLink>
+          <StyledLink to='/profile'>Profile</StyledLink>
         </Menu>
       </Nav>
     </>

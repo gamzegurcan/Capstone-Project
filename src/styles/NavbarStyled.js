@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 export const MenuLink = styled.a`
   padding: 1rem 2rem;
@@ -32,4 +33,18 @@ export const Menu = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+`;
+
+export const StyledLink = styled(Link)`
+  padding: 1rem 2rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in;
+  font-size: 0.9rem;
+
+  &:hover {
+    color: red;
+  }
 `;
