@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
-import {AiFillHeart } from "react-icons/ai";
-import { useDispatch } from 'react-redux';
-import {addFavorite} from '../reduxStore/user';
+import { useDispatch, useSelector} from 'react-redux';
+import {AiFillHeart,AiOutlineHeart } from "react-icons/ai";
+import {addFavorite, removeFavorite} from '../reduxStore/user';
+
 
 function MovieCard({item}){
   const dispatch = useDispatch()
+  const {user}= useSelector((state) => state )
+  // console.log(user)
+  const isFav = user?.some((fav) => fav.id === item.id)
+  // console.log(isFav, item.id)
 
   return(
     <>
@@ -16,7 +21,10 @@ function MovieCard({item}){
             <p className="card-text">{item.release_date}</p>
           </div>
         </Link>
-        <AiFillHeart onClick={() => dispatch(addFavorite(item.movieId, item.title, item.poster_path, item.release_date))} />
+        {
+          isFav ? <AiFillHeart onClick={() => dispatch(removeFavorite(item.id))} /> :
+          <AiOutlineHeart onClick={() => dispatch(addFavorite(item.id, item.title, item.poster_path, item.release_date))} />
+        }
       </div>
     </>
   );
