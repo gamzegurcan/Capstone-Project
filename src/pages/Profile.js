@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import MovieCard from "../components/MovieCard";
+import UserProfile from "../components/UserProfile";
 
 
 export default function Profile ({item}) {
@@ -7,7 +8,13 @@ export default function Profile ({item}) {
 
     return (
         <>
+
            <div className="container">
+               <div className="row mt-5">
+                   <div className="col">
+                        <UserProfile />
+                   </div>
+               </div>
                <div className="row mt-5">
                    <h1>Favorite Movies</h1>
                {

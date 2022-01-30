@@ -6,12 +6,13 @@ export const userLogin = (username, password) => ({
 })
 
 const loginReducer = (user = {
-  avatarUrl: 'https://picsum.photos/id/237/200/300',
+  avatarUrl: 'https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png',
   username: 'gamzegurcan',
   password: 'deneme',
   socials: {
     twitter: 'https://twitter.com/gamzegurcann',
-    instagram: 'https://www.instagram.com/gamzegurcann'
+    instagram: 'https://www.instagram.com/gamzegurcann',
+    github: 'https://github.com/gamzegurcan'
   },
   joinDate: 'January 2022',
 },
