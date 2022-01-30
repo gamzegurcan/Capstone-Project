@@ -3,12 +3,14 @@ import { persistStore, persistReducer} from 'redux-persist';
 import storage from "redux-persist/lib/storage";
 import favoriteReducer from "./favorite";
 import seenReducer from "./seenMovie";
+import filterReducer from "./sortFilter";
 import loginReducer from "./user";
 
 const rootReducer= combineReducers({
     user:loginReducer,
     favorite: favoriteReducer,
     seen: seenReducer,
+    filteredData: filterReducer,
 })
 
 const persistConfig = {

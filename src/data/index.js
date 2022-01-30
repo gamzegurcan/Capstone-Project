@@ -12,4 +12,5 @@ export const fetchDetailMovies = (movieId) => BASE_AXIOS.get(`/movie/${movieId}?
 export const fetchCast = (movieId) => BASE_AXIOS.get(`/movie/${movieId}/credits?api_key=${API_KEY}`)
 export const fetchReviews = (movieId) => BASE_AXIOS.get(`/movie/${movieId}/reviews?api_key=${API_KEY}`)
 export const fetchRecommendationMovies = (movieId) => BASE_AXIOS.get(`/movie/${movieId}/recommendations?api_key=${API_KEY}`)
+export const fetchSortMovies = ( genre_id) => BASE_AXIOS.get(`movie/popular?api_key=${API_KEY}&release_date.lte=&release_date.gte=&with_genres=${genre_id}`)
 
