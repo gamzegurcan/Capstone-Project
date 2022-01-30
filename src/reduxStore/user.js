@@ -1,36 +1,31 @@
-const ADD_FAVORITE =  "ADD_FAVORITE";
-const REMOVE_FAVORITE = "REMOVE_FAVORITE";
-const ADD_SEEN_LIST = "ADD_SEEN_LIST"
+const USER_LOGIN = "USER_LOGIN"
 
-export const addSeenList = (id) => ({
-    type: ADD_SEEN_LIST,
-    payload: id
+export const userLogin = (username, password) => ({
+  type: USER_LOGIN,
+  payload: {username, password},
 })
 
-export const addFavorite = (id, title, poster_path, release_date) => ({
-    type: ADD_FAVORITE,
-    payload: {
-      id,
-      title,
-      poster_path,
-      release_date
-    }
-})
+const loginReducer = (user = {
+  avatarUrl: 'https://picsum.photos/id/237/200/300',
+  username: 'gamzegurcan',
+  password: 'deneme',
+  socials: {
+    twitter: 'https://twitter.com/gamzegurcann',
+    instagram: 'https://www.instagram.com/gamzegurcann'
+  },
+  joinDate: 'January 2022',
+},
+action
+) => {
+  switch (action.type){
+    case USER_LOGIN:
+      return action.payload.username === user.username &&
+      action.payload.password === user.password
+      ?{...user, login: true}
+      :{...user, login: false};
+    default:
+      return user;
+  }
+};
 
-export const removeFavorite = (id) => ({
-    type: REMOVE_FAVORITE,
-    payload: id
-})
-
-const userReducer = (user= [], action) => {
-    switch(action.type){
-        case ADD_FAVORITE:
-            return  [...user, action.payload]
-        case REMOVE_FAVORITE:
-            return user?.filter((item) => item.id !== action.payload)
-        default: 
-            return user
-    }
-}
-
-export default userReducer;
+export default loginReducer;

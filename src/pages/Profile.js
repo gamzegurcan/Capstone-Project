@@ -3,7 +3,7 @@ import MovieCard from "../components/MovieCard";
 
 
 export default function Profile ({item}) {
-    const user = useSelector((state) => state)
+    const {favorite, seen} = useSelector((state) => state);
 
     return (
         <>
@@ -11,7 +11,17 @@ export default function Profile ({item}) {
                <div className="row mt-5">
                    <h1>Favorite Movies</h1>
                {
-                user?.user?.map((item,index) => 
+                favorite?.films?.map((item,index) => 
+                    <div className="col-sm-3" key={index}>
+                        <MovieCard  item={item} />
+                    </div>
+                )
+               }
+               </div>
+               <div className="row mt-5">
+                   <h1>Seen Movies</h1>
+               {
+                seen?.films?.map((item,index) => 
                     <div className="col-sm-3" key={index}>
                         <MovieCard  item={item} />
                     </div>
