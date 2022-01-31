@@ -2,6 +2,7 @@ import { combineReducers, createStore } from "redux";
 import { persistStore, persistReducer} from 'redux-persist';
 import storage from "redux-persist/lib/storage";
 import favoriteReducer from "./favorite";
+import loadMoreReducer from "./loadMore";
 import seenReducer from "./seenMovie";
 import filterReducer from "./sortFilter";
 import loginReducer from "./user";
@@ -11,6 +12,7 @@ const rootReducer= combineReducers({
     favorite: favoriteReducer,
     seen: seenReducer,
     filteredData: filterReducer,
+    loadMoreData : loadMoreReducer,
 })
 
 const persistConfig = {

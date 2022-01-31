@@ -1,10 +1,9 @@
 import { useQuery } from 'react-query'
 import { useState, useEffect } from "react";
-import { fetchDiscoverMovies, fetchSearchMovies } from '../data';
+import { fetchSearchMovies } from '../data';
 import Search from '../components/Search';
 import Discover from '../components/Discover';
 import Trending from '../components/Trending';
-import { Link } from 'react-router-dom';
 import MovieCard from '../components/MovieCard';
 
 function Home(props) {
