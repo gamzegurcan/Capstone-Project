@@ -18,7 +18,7 @@ export default function SortFilter() {
   },[dateTo,dateFrom,sort,genre_id])
 
   
-   console.log(dateTo,dateFrom,sort,genre_id);
+  //  console.log(dateTo,dateFrom,sort,genre_id);
 
   return (
     <>

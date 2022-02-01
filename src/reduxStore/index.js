@@ -5,6 +5,7 @@ import favoriteReducer from "./favorite";
 import loadMoreReducer from "./loadMore";
 import seenReducer from "./seenMovie";
 import filterReducer from "./sortFilter";
+import themeChangeReducer from "./theme";
 import loginReducer from "./user";
 
 const rootReducer= combineReducers({
@@ -13,6 +14,7 @@ const rootReducer= combineReducers({
     seen: seenReducer,
     filteredData: filterReducer,
     loadMoreData : loadMoreReducer,
+    themeChange: themeChangeReducer,
 })
 
 const persistConfig = {

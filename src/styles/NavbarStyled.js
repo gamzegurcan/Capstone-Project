@@ -48,3 +48,24 @@ export const StyledLink = styled(Link)`
     color: red;
   }
 `;
+
+export const ThemeButton = styled.button`
+  display:flex;
+  border: 0;
+  color: white;
+  background-color:black;
+  padding: 0;
+`;
+
+export const UserIcon = styled.img`
+  padding: 6px;
+  width: 10%;
+  margin-left: 0;
+`;
+
+export const Profile = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+`;

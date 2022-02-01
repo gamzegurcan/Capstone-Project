@@ -21,9 +21,11 @@ function Popular(props){
     })
   
   function loadMore () {
-    setPage(page+1);
+    setPage((prevValue) => prevValue + 1);
     dispatch(loadMoreMovies(data))
   }
+
+  console.log(data)
 
   if(filteredData[0]?.length > 0) {
     console.log(filteredData[0])
@@ -58,9 +60,6 @@ function Popular(props){
         
           <h1 className='text-center'>Popular Movies</h1>
           {
-            
-          }
-          {
             loadMoreData[0]?.map((item,index) => (
             <div key={index} className="col-sm-3 mt-3">
               <MovieCard item={item} />
@@ -71,7 +70,7 @@ function Popular(props){
             </div>
             )))
           } 
-          <button onClick={loadMore}>Load More</button>
+          <button type="button" className="btn btn-danger" onClick={loadMore} >Load More</button>
         </div>
     </div>
     
