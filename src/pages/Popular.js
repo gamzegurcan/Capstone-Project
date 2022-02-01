@@ -29,9 +29,9 @@ function Popular(props){
 
   if(filteredData[0]?.length > 0) {
     console.log(filteredData[0])
-    return <div className="container mt-5">
+    return <div className="container ">
     <div className="row">
-      <div className="col-sm-3">
+      <div className="col-sm-3 mt-5">
         <SortFilter />
       </div>
       
@@ -52,9 +52,9 @@ function Popular(props){
 
   return(
     
-    <div className="container mt-5">
+    <div className="container ">
       <div className="row">
-        <div className="col-sm-3">
+        <div className="col-sm-3 mt-5">
           <SortFilter />
         </div>
         

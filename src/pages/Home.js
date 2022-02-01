@@ -31,8 +31,8 @@ function Home(props) {
   if(search !== '' ){
     return (
       <>
-        <div className="row mx-0 d-flex mt-5">
-        <div className="col-5 offset-3">
+        <div className="row mx-0 d-flex ">
+        <div className="col-5 offset-3 mt-5">
           <Search search={search} setSearch={setSearch} />
         </div>
       </div>
@@ -54,8 +54,8 @@ function Home(props) {
   }
   return (
     <>
-      <div className="row mx-0 d-flex mt-5">
-        <div className="col-5 offset-3">
+      <div className="row mx-0 d-flex ">
+        <div className="col-5 offset-3 mt-5">
           <Search search={search} setSearch={setSearch} />
         </div>
       </div>

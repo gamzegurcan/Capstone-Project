@@ -8,7 +8,7 @@ function Navbar(props){
   const [display, setDisplay] = useState(true)
   const [theme, setTheme] = useState("light");
   const dispatch = useDispatch();
-  const {themeChange, login } = useSelector((state) => state);
+  const {themeChange, user } = useSelector((state) => state);
   const themeName = themeChange ? "light" : "dark";
   console.log(themeName)
  console.log(theme)
@@ -30,16 +30,18 @@ function Navbar(props){
           <StyledLink to='/profile'>Profile</StyledLink>
         </Menu>
         <Profile>
-        {login?.login && <UserIcon src={`${login.avatarUrl}`} />}
-        <ThemeButton
-          id="themebutton"
-          variant="outline"
-          onClick={clickHandler}
-          theme={themeName}
-        >
-          {theme ? <FiToggleRight /> : <FiToggleLeft />}
-        </ThemeButton>
-      </Profile>
+          <ThemeButton
+            id="themebutton"
+            variant="outline"
+            onClick={clickHandler}
+            theme={themeName}
+          >
+            {theme ? <FiToggleRight /> : <FiToggleLeft />}
+          </ThemeButton>
+          {user?.login && <UserIcon src={`${user.avatarUrl}`} />}
+          <MenuLink href='/login'>Login</MenuLink>
+        </Profile>
+      
       </Nav>
     </>
   );

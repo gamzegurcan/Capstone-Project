@@ -16,7 +16,7 @@ const navigate = useNavigate();
 
 useEffect(() => {
   if(user?.login) {
-    navigate('/profile');
+    navigate('/');
   }
 }, [navigate,user]);
 

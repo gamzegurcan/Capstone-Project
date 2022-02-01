@@ -10,8 +10,8 @@ export default function Profile ({item}) {
         <>
 
            <div className="container">
-               <div className="row mt-5">
-                   <div className="col">
+               <div className="row ">
+                   <div className="col mt-5">
                         <UserProfile />
                    </div>
                </div>

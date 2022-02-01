@@ -22,7 +22,7 @@ function MovieCard({item}){
     <>
       <CardStyle>
         <Link to={`${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
-          <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="..." />
+          <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}  alt="..." />
           <div className="card-body">
             <CardTitle theme={themeName}>{item.title}</CardTitle>
             <CardText theme={themeName}>{item.release_date}</CardText>
