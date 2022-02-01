@@ -1,9 +1,16 @@
 const USER_LOGIN = "USER_LOGIN"
+const USER_LOGOUT = "USER_LOGOUT"
 
 export const userLogin = (username, password) => ({
   type: USER_LOGIN,
   payload: {username, password},
 })
+
+export const userLogout = (value) => ({
+  type: USER_LOGOUT,
+  payload: value,
+})
+
 
 const loginReducer = (user = {
   avatarUrl: 'https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png',
@@ -24,6 +31,8 @@ action
       action.payload.password === user.password
       ?{...user, login: true}
       :{...user, login: false};
+    case USER_LOGOUT:
+      return {...user, login: false}
     default:
       return user;
   }

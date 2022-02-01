@@ -34,16 +34,20 @@ function Popular(props){
       <div className="col-sm-3 mt-5">
         <SortFilter />
       </div>
-      
+      <div className="col">
+        <div className="row">
+          
         <h1 className='text-center'>Popular Movies</h1>
         
         {
           filteredData[0]?.map((item,i) => (
-          <div key={i} className="col-sm-3 mt-3">
+          <div key={i} className="col-sm-4 mt-3">
             <MovieCard item={item} />
           </div>
           ))
         } 
+        </div>
+      </div>
         
       </div>
   </div>;
@@ -57,19 +61,22 @@ function Popular(props){
         <div className="col-sm-3 mt-5">
           <SortFilter />
         </div>
-        
+        <div className="col">
+          <div className="row">
           <h1 className='text-center'>Popular Movies</h1>
           {
             loadMoreData[0]?.map((item,index) => (
-            <div key={index} className="col-sm-3 mt-3">
+            <div key={index} className="col-sm-4 mt-3">
               <MovieCard item={item} />
             </div>
             )).concat(data?.map((item,index) => (
-            <div key={index} className="col-sm-3 mt-3">
+            <div key={index} className="col-sm-4 mt-3">
               <MovieCard item={item} />
             </div>
             )))
           } 
+          </div>
+        </div>
           <button type="button" className="btn btn-danger" onClick={loadMore} >Load More</button>
         </div>
     </div>

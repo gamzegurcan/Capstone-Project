@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const GlobalStyles = styled.body`
+const GlobalStyles = styled.div`
     font-family: 'Poppins', sans-serif;
     font-size: 1.15em;
     margin: 0;

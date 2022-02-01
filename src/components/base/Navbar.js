@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {FiToggleLeft, FiToggleRight} from 'react-icons/fi';
 import {Nav, MenuLink, Menu, StyledLink, ThemeButton,UserIcon, Profile} from '../../styles/NavbarStyled';
 import {themeChanger} from '../../reduxStore/theme';
-import { useDispatch, useSelector } from 'react-redux';
+import { userLogout } from '../../reduxStore/user';
+
 
 function Navbar(props){
   const [display, setDisplay] = useState(true)
@@ -30,16 +32,21 @@ function Navbar(props){
           <StyledLink to='/profile'>Profile</StyledLink>
         </Menu>
         <Profile>
+          
+          {user?.login && <UserIcon src={`${user.avatarUrl}`} />}
+          {
+            user?.login 
+            ? <StyledLink to='/' onClick={() => dispatch(userLogout(false))} >Logout</StyledLink>
+            : <StyledLink to='/login'>Login</StyledLink>
+          }
           <ThemeButton
             id="themebutton"
             variant="outline"
             onClick={clickHandler}
             theme={themeName}
           >
-            {theme ? <FiToggleRight /> : <FiToggleLeft />}
+            {theme ? <FiToggleRight  size='30px' /> : <FiToggleLeft size='30px' />}
           </ThemeButton>
-          {user?.login && <UserIcon src={`${user.avatarUrl}`} />}
-          <MenuLink href='/login'>Login</MenuLink>
         </Profile>
       
       </Nav>

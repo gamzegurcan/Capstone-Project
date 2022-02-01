@@ -43,29 +43,6 @@ function MovieCard({item}){
           </div>
         </div>
       </CardStyle>
-      {/* <CardContainer>
-      <Link to={`${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
-        <Card>
-          <CardImage>
-            <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="..." />
-          </CardImage>
-          <h4 className="card-text">{item.title}</h4>
-          <p className="card-text">{item.release_date}</p>
-        </Card>
-        </Link>
-        <div className="row">
-          <div className="col">
-          {
-          isFav ? <AiFillHeart onClick={() => dispatch(removeFavorite(item.id))} /> :
-          <AiOutlineHeart onClick={() => dispatch(addFavorite(item.id, item.title, item.poster_path, item.release_date))} />
-        }
-        {
-          isSeen ? <BsFillBookmarkFill onClick={() => dispatch(removeSeen(item.id))} /> :
-          <BsBookmark onClick={() => dispatch(addSeen(item.id, item.title, item.poster_path, item.release_date))} />
-        }
-          </div>
-        </div>
-      </CardContainer> */}
     </>
   );
 }
