@@ -1,13 +1,14 @@
 const ADD_SEEN = "ADD_SEEN";
 const REMOVE_SEEN = "REMOVE_SEEN";
 
-export const addSeen = (id, title, poster_path, release_date) => ({
+export const addSeen = (id, title, poster_path, release_date,genre_ids) => ({
   type: ADD_SEEN,
   payload: {
     id,
     title,
     poster_path,
     release_date,
+    genre_ids,
   }
 });
 

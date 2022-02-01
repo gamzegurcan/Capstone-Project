@@ -20,7 +20,7 @@ export const Nav = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background: black;
   position: relative;
   top: 0;

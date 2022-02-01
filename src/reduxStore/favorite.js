@@ -1,13 +1,14 @@
 const ADD_FAVORITE = "ADD_FAVORITE";
 const REMOVE_FAVORITE = "REMOVE_FAVORITE";
 
-export const addFavorite = (id, title, poster_path, release_date) => ({
+export const addFavorite = (id, title, poster_path, release_date,genre_ids) => ({
   type: ADD_FAVORITE,
   payload: {
     id,
     title,
     poster_path,
     release_date,
+    genre_ids,
   }
 });
 
