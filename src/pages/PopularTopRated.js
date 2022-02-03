@@ -4,9 +4,7 @@ import { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
 import { fetchSortFilterMovies } from '../data';
 
-
-
-function SortFilter(props) {
+function PopularTopRated(props) {
 
   const params = useParams();
   const [size, setSize] = useState(3);
@@ -51,4 +49,4 @@ function SortFilter(props) {
   );
 }
 
-export default SortFilter;
+export default PopularTopRated;

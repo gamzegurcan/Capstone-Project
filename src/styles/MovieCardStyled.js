@@ -5,7 +5,7 @@ export const CardStyle = styled.div`
   color: ${({ theme }) => (theme === "light" ? "#AF0404": "#AF0404"  )};
   padding: 1rem;
   border-radius: 5%;
-  width: 90%;
+  width: 95%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

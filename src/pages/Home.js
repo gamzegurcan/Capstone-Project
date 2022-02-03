@@ -68,7 +68,7 @@ function Home(props) {
       </div>
       
       <div className="container">
-        <div className="row">
+        <div className="row mt-5">
         <h1 className='mb-5'>Trending</h1>
           <Trending />
         </div>

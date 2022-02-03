@@ -23,7 +23,7 @@ function Trending(props){
 
   return(
     <>
-    <Slider {...settings}>
+    <Slider {...settings} className='mb-5'>
     {
       data?.map((item) => 
       <div key={item.id} className="col-sm-3">
