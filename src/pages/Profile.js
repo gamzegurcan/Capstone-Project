@@ -1,17 +1,17 @@
 import { useSelector } from "react-redux"
 import { useState } from "react";
-import { useQuery } from 'react-query';
+// import { useQuery } from 'react-query';
 import UserProfile from "../components/UserProfile";
-import { fetchGenres } from "../data";
+// import { fetchGenres } from "../data";
 import FavoriteSeen from "../components/FavoriteSeen";
 
 export default function Profile(props) {
     const [sort, setSort] = useState();
 
-    const { data } = useQuery("movies genre", fetchGenres, {
-        retry: false,
-        select: (data) => data.data.genres,
-    });
+    // const { data } = useQuery("movies genre", fetchGenres, {
+    //     retry: false,
+    //     select: (data) => data.data.genres,
+    // });
 
     const { favorite, seen } = useSelector((state) => state);
     // console.log(favorite)

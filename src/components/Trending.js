@@ -1,7 +1,5 @@
 import { useQuery } from 'react-query';
-import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
-import { slidesOnLeft } from 'react-slick/lib/utils/innerSliderUtils';
 import { fetchTrendingMovies } from '../data';
 import MovieCard from './MovieCard';
 

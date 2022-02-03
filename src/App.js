@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/base/Navbar';
-import Footer from './components/base/Footer';
 import routes from './router';
 import { useSelector } from 'react-redux';
 import GlobalStyles from './styles/Global';

@@ -18,7 +18,7 @@ function Recommendation({movieId}){
         <div key={item.id} className="col-sm-3">
           <div  className="card" >
           <Link to={`${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
-            <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="Card image cap" />
+            <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="..." />
             <div className="card-body">
               <p className="card-text">{item.title}</p>
             </div>

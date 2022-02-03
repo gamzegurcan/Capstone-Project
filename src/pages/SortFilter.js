@@ -1,5 +1,4 @@
 import { useQuery } from 'react-query';
-import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import MovieCard from '../components/MovieCard';
