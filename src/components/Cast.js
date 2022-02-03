@@ -27,6 +27,7 @@ function Cast({movieId}) {
               <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.profile_path}`} alt="..." />
               <div className="card-body">
                 <p className="card-text">{item.name}</p>
+                <p className="card-text">({item.character})</p>
               </div>
             </div>
             </div>
@@ -38,3 +39,4 @@ function Cast({movieId}) {
 }
 
 export default Cast;
+

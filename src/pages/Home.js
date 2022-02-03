@@ -9,6 +9,7 @@ import MovieCard from '../components/MovieCard';
 function Home(props) {
   const [search, setSearch] = useState("")
   const [filteredData, setFilteredData] = useState([])
+  const [trend, setTrend] = useState('day')
 
   const { data } = 
     useQuery(['searchmovies',search],() => fetchSearchMovies(search), 
@@ -70,7 +71,19 @@ function Home(props) {
       <div className="container">
         <div className="row mt-5">
         <h1 className='mb-5'>Trending</h1>
-          <Trending />
+        <div className="col-sm-3 mb-5">
+        <select
+          className="form-select"
+          aria-label="Default select example"
+          onChange={(e) =>
+            setTrend(e.target.options[e.target.selectedIndex].value)
+          }
+        >
+          <option value="day">Day</option>
+          <option value="week">Week</option>
+          </select>
+        </div>
+          <Trending trend={trend}/>
         </div>
       </div>
     </>

@@ -15,8 +15,8 @@ function Recommendation({movieId}){
     <>
     {
         data?.map((item) => 
-        <div key={item.id} className="col-sm-3">
-          <div  className="card" >
+        <div key={item.id} className="col-sm-3 mt-5">
+          <div  className="card " >
           <Link to={`${item.id}`} style={{textDecoration: 'none', color: 'black'}}>
             <img className="card-img-top w-100" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} alt="..." />
             <div className="card-body">

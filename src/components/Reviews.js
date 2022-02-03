@@ -14,7 +14,7 @@ function Reviews({movieId}){
     <>
       {
         data?.map((item,index) => (
-          <div className="card">
+          <div className="card border-0 mb-5">
             <div className="card-body">
               <h5 className="card-title">{item.author}</h5>
               <p className="card-text">{item.content.substring(0,300)}...</p>

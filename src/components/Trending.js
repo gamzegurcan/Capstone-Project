@@ -1,15 +1,13 @@
 import { useQuery } from 'react-query';
 import Slider from 'react-slick';
-import { fetchTrendingMovies } from '../data';
+import { fetchTrendDayMovies } from "../data";
 import MovieCard from './MovieCard';
 
-function Trending(props){
-  const { data } = 
-    useQuery('trendmovies', fetchTrendingMovies, 
-    { 
-      retry: false, 
-      select: (data) => data.data.results 
-    })
+function Trending({trend}){
+  const { data } = useQuery(["trend movies ",trend],() => fetchTrendDayMovies(trend), {
+    retry: false,
+    select: (data) => data.data.results,
+  });
 
     var settings = {
       arrows: false,
