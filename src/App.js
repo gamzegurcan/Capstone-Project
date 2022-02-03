@@ -3,6 +3,7 @@ import Navbar from './components/base/Navbar';
 import routes from './router';
 import { useSelector } from 'react-redux';
 import GlobalStyles from './styles/Global';
+import Footer from './components/base/Footer';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           }
         </Routes>
       </GlobalStyles>
+      <Footer />
     </>
   );
 }

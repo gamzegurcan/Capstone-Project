@@ -1,7 +1,7 @@
 import {  Button, ButtonGroup } from "react-bootstrap";
 import {  useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { addGenres } from "../reduxStore/sortFilter";
+import { addGenres, resetData } from "../reduxStore/sortFilter";
 
 export default function SortFilter() {
   const [genre_id, setGenre_id] = useState("");
@@ -22,8 +22,9 @@ export default function SortFilter() {
 
   return (
     <>
+    <div className="container mt-5">
     <select className="form-select" aria-label="Default select example" onChange={(e) => setSort((e.target.value))}>
-      <option disabled selected hidden>Sort By</option>
+      <option >Sort By</option>
       <option value="original_title.asc">A to Z by The Title</option>
       <option value="original_title.desc">Z to A by The Title</option>
       <option value="popularity.asc">Increasing by Popularity</option>
@@ -97,6 +98,10 @@ export default function SortFilter() {
       <Button className="m-2" variant="secondary" size="sm" onClick={() => dispatch(addGenres(data)) }>
         Search
       </Button>
+      <Button className="m-2" variant="secondary" size="sm" onClick={() => dispatch(resetData(data)) }>
+        Reset
+      </Button>
+    </div>
     </>
   );
 }

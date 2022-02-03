@@ -7,15 +7,13 @@ import { userLogout } from '../../reduxStore/user';
 
 
 function Navbar(props){
-  const [display, setDisplay] = useState(true)
+  const [display, setDisplay] = useState(false)
   const [theme, setTheme] = useState("light");
   const dispatch = useDispatch();
   const {themeChange, user } = useSelector((state) => state);
   const themeName = themeChange ? "light" : "dark";
-  console.log(themeName)
- console.log(theme)
+
   function clickHandler(event) {
-    
     setTheme(!theme);
     dispatch(themeChanger(theme));
   } 
@@ -27,9 +25,15 @@ function Navbar(props){
           <MenuLink href='/'>Home</MenuLink>
           <MenuLink href='/about'>About</MenuLink>
           <MenuLink dropdownToggle onClick={() => setDisplay(!display)}>Movies</MenuLink>
-          <MenuLink href='/sort-filter/popular' hidden={display} toggle={() => setDisplay(!display)} >Popular</MenuLink>
-          <MenuLink href='/sort-filter/top_rated' hidden={display} toggle={() => setDisplay(!display)}>Top Rated</MenuLink>
-          <StyledLink to='/profile'>Profile</StyledLink>
+          {
+            display && <StyledLink to='/popular' >Popular</StyledLink>
+          }
+          {
+            display && <StyledLink to='/top-rated' >Top Rated</StyledLink>
+          }
+          {
+            user?.login && <StyledLink to='/profile'>Profile</StyledLink>
+          }
         </Menu>
         <Profile>
           

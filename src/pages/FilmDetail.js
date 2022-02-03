@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 import Cast from '../components/Cast'
 import Reviews from '../components/Reviews'
 import Recommendation from '../components/Recommendation'
-import styled from 'styled-components';
 
 function FilmDetail(props) {
   const params = useParams()
