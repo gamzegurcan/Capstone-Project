@@ -27,8 +27,8 @@ function Navbar(props){
           <MenuLink href='/'>Home</MenuLink>
           <MenuLink href='/about'>About</MenuLink>
           <MenuLink dropdownToggle onClick={() => setDisplay(!display)}>Movies</MenuLink>
-          <MenuLink href='/popular' hidden={display} toggle={() => setDisplay(!display)} >Popular</MenuLink>
-          <MenuLink href='/top-rated' hidden={display} toggle={() => setDisplay(!display)}>Top Rated</MenuLink>
+          <MenuLink href='/sort-filter/popular' hidden={display} toggle={() => setDisplay(!display)} >Popular</MenuLink>
+          <MenuLink href='/sort-filter/top_rated' hidden={display} toggle={() => setDisplay(!display)}>Top Rated</MenuLink>
           <StyledLink to='/profile'>Profile</StyledLink>
         </Menu>
         <Profile>

@@ -22,7 +22,7 @@ export default function SortFilter() {
 
   return (
     <>
-    <select className="form-select" aria-label="Default select example" onChange={(e) => setSort((e.target.options[e.target.selectedIndex].value))}>
+    <select className="form-select" aria-label="Default select example" onChange={(e) => setSort((e.target.value))}>
       <option disabled selected hidden>Sort By</option>
       <option value="original_title.asc">A to Z by The Title</option>
       <option value="original_title.desc">Z to A by The Title</option>
