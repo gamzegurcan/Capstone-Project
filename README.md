@@ -1,7 +1,7 @@
 # MOVIE WEBSITE WITH REACT 
 I created movie website with react and [TMDB API](https://developers.themoviedb.org/3/getting-started/introduction).
 
-## [Project Link](https://moviesites.netlify.app/)
+## [Project Link](https://moviesites.netlify.app/)🎬🍿
 
 ## Login Information
 - username: gamzegurcan
